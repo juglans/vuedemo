@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #canvas{
+      width: 300px;
+      height: 300px;
+      border: 1px solid red;
+      color: red;
+      padding: 150px 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+      <a @click.prevent="click" href="http://www.ddr888.cc/">DDR888</a>
+      
+    <p>{{ name }}</p>
+    <p>{{ job }}</p>
+    <h1>{{ age }}</h1>
+    <button @click.once="add(1)">Add</button>
+    <button @click="sub(1)">subtract</button>
+    <button @dblclick="add(10)">Add 10</button>
+    <button @dblclick="sub(10)">subtract 10</button>
+
+    <div id="canvas" @mousemove="updateXY">{{ x }},{{ y }}</div>
+  </div> 
+  <script src="https://unpkg.com/vue"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
